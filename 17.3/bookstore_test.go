@@ -2,6 +2,7 @@ package bookstore_test
 
 import (
 	"bookstore"
+	"sort"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
@@ -17,8 +18,10 @@ func TestGetAllBooks(t *testing.T) {
 		{ID: 2, Title: "The Power of Go: Tools"},
 	}
 	got := bookstore.GetAllBooks()
+	sort.Slice(got, func(i, j int) bool {
+		return got[i].ID < got[j].ID
+	})
 	if !cmp.Equal(want, got) {
 		t.Error(cmp.Diff(want, got))
 	}
 }
-

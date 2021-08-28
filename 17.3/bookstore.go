@@ -1,7 +1,5 @@
 package bookstore
 
-import "fmt"
-
 // Book represents information about a book.
 type Book struct {
 	Title  string
@@ -12,10 +10,10 @@ type Book struct {
 
 var Books map[int]Book
 
-func GetBook(ID int) (Book, error) {
-	b, ok := Books[ID]
-	if !ok {
-		return Book{}, fmt.Errorf("ID %d doesn't exist", ID)
+func GetAllBooks() []Book {
+	result := []Book{}
+	for _, b := range Books {
+		result = append(result, b)
 	}
-	return b, nil
+	return result
 }

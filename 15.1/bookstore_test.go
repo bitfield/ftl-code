@@ -9,12 +9,12 @@ import (
 
 func TestGetAllBooks(t *testing.T) {
 	bookstore.Books = []bookstore.Book{
-		{Title: "Book 1"},
-		{Title: "Book 2"},
+		{Title: "For the Love of Go"},
+		{Title: "The Power of Go: Tools"},
 	}
 	want := []bookstore.Book{
-		{Title: "Book 1"},
-		{Title: "Book 2"},
+		{Title: "For the Love of Go"},
+		{Title: "The Power of Go: Tools"},
 	}
 	got := bookstore.GetAllBooks()
 	if !cmp.Equal(want, got) {

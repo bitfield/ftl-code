@@ -6,11 +6,14 @@ type Book struct {
 	Author string
 	Copies int
 	ID int
-	PriceCents int
-	DiscountPercent int
 }
 
-func (b Book) NetPriceCents() int {
-	saving := b.PriceCents * b.DiscountPercent / 100
-	return b.PriceCents - saving
+var Books map[int]Book
+
+func GetAllBooks() []Book {
+	result := []Book{}
+	for _, b := range Books {
+		result = append(result, b)
+	}
+	return result
 }
