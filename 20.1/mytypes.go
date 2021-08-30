@@ -1,10 +1,11 @@
 package mytypes
 
-// MyInt is a custom version of the `int` type.
-type MyInt int
+import "strings"
 
-// Twice multiplies its receiver by 2 and returns
-// the result.
-func (i MyInt) Twice() MyInt {
-	return i * 2
+// MyBuilder is a custom version of the `strings.Builder` type.
+type MyBuilder strings.Builder
+
+// Hello returns the string "Hello, Gophers!"
+func (mb MyBuilder) Hello() string {
+	return "Hello, Gophers!"
 }
