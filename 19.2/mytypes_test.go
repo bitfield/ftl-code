@@ -6,6 +6,7 @@ import (
 )
 
 func TestTwice(t *testing.T) {
+	t.Parallel()
 	input := mytypes.MyInt(9)
 	want := mytypes.MyInt(18)
 	got := input.Twice()

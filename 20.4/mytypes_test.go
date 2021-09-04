@@ -6,6 +6,7 @@ import (
 )
 
 func TestMyBuilderEmbedded(t *testing.T) {
+	t.Parallel()
 	var mb mytypes.MyBuilder
 	mb.WriteString("Hello, ")
 	mb.WriteString("Gophers!")

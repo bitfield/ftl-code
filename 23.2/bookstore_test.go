@@ -6,6 +6,7 @@ import (
 )
 
 func TestSetCategory(t *testing.T) {
+	t.Parallel()
 	b := bookstore.Book{
 		Title: "For the Love of Go",
 	}
@@ -27,6 +28,7 @@ func TestSetCategory(t *testing.T) {
 }
 
 func TestSetCategoryInvalid(t *testing.T) {
+	t.Parallel()
 	b := bookstore.Book{
 		Title: "For the Love of Go",
 	}

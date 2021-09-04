@@ -7,8 +7,6 @@ type Book struct {
 	Copies int
 }
 
-var Books []Book
-
-func GetAllBooks() []Book {
-	return Books
+func GetAllBooks(catalog []Book) []Book {
+	return catalog
 }

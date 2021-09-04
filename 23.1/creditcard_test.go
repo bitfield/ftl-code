@@ -6,6 +6,7 @@ import (
 )
 
 func TestNew(t *testing.T) {
+	t.Parallel()
 	want := "1234567890"
 	cc, err := creditcard.New(want)
 	if err != nil {
@@ -18,6 +19,7 @@ func TestNew(t *testing.T) {
 }
 
 func TestNewInvalidReturnsError(t *testing.T) {
+	t.Parallel()
 	_, err := creditcard.New("")
 	if err == nil {
 		t.Fatal("want error for empty card number, but got nil")

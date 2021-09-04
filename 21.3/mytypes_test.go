@@ -6,6 +6,7 @@ import (
 )
 
 func TestDouble(t *testing.T) {
+	t.Parallel()
 	x := mytypes.MyInt(12)
 	want := mytypes.MyInt(24)
 	p := &x

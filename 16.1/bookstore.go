@@ -8,8 +8,6 @@ type Book struct {
 	ID int
 }
 
-var Books map[int]Book
-
-func GetBook(ID int) Book {
-	return Books[ID]
+func GetBook(catalog map[int]Book, ID int) Book {
+	return catalog[ID]
 }

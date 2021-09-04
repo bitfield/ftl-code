@@ -7,6 +7,7 @@ import (
 )
 
 func TestStringsBuilder(t *testing.T) {
+	t.Parallel()
 	var sb strings.Builder
 	sb.WriteString("Hello, ")
 	sb.WriteString("Gophers!")
@@ -23,6 +24,7 @@ func TestStringsBuilder(t *testing.T) {
 }
 
 func TestMyBuilderHello(t *testing.T) {
+	t.Parallel()
 	var mb mytypes.MyBuilder
 	want := "Hello, Gophers!"
 	got := mb.Hello()

@@ -6,6 +6,7 @@ import (
 )
 
 func TestStringUppercaser(t *testing.T) {
+	t.Parallel()
 	var su mytypes.StringUppercaser
 	su.Contents.WriteString("Hello, Gophers!")
 	want := "HELLO, GOPHERS!"

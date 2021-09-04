@@ -6,25 +6,27 @@ import (
 )
 
 func TestSetCategory(t *testing.T) {
-	input := bookstore.Book{
+	t.Parallel()
+	b := bookstore.Book{
 		Title: "For the Love of Go",
 	}
 	want := "Autobiography"
-	err := input.SetCategory(want)
+	err := b.SetCategory(want)
 	if err != nil {
 		t.Fatal(err)
 	}
-	got := input.Category()
+	got := b.Category()
 	if want != got {
 		t.Errorf("want category %q, got %q", want, got)
 	}
 }
 
 func TestSetCategoryInvalid(t *testing.T) {
-	input := bookstore.Book{
+	t.Parallel()
+	b := bookstore.Book{
 		Title: "For the Love of Go",
 	}
-	err := input.SetCategory("bogus")
+	err := b.SetCategory("bogus")
 	if err == nil {
 		t.Fatal("want error setting invalid category 'bogus', got nil")
 	}

@@ -10,8 +10,6 @@ type Book struct {
 
 type Catalog map[int]Book
 
-var Books Catalog
-
 func (c Catalog) GetAllBooks() []Book {
 	result := []Book{}
 	for _, b := range c {

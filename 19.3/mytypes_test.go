@@ -6,6 +6,7 @@ import (
 )
 
 func TestMyStringLen(t *testing.T) {
+	t.Parallel()
 	input := mytypes.MyString("Hello, Gophers!")
 	want := 15
 	got := input.Len()

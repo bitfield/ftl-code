@@ -6,6 +6,7 @@ import (
 )
 
 func TestBook(t *testing.T) {
+	t.Parallel()
 	_ = bookstore.Book{
 		Title:  "Spark Joy",
 		Author: "Marie Kondō",
@@ -14,13 +15,14 @@ func TestBook(t *testing.T) {
 }
 
 func TestBuy(t *testing.T) {
-	input := bookstore.Book{
+	t.Parallel()
+	b := bookstore.Book{
 		Title:  "Spark Joy",
 		Author: "Marie Kondō",
 		Copies: 2,
 	}
 	want := 1
-	result := bookstore.Buy(input)
+	result := bookstore.Buy(b)
 	got := result.Copies
 	if want != got {
 		t.Errorf("want %d copies after buying 1 copy from a stock of 2, got %d", want, got)

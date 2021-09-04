@@ -10,10 +10,8 @@ type Book struct {
 	ID int
 }
 
-var Books map[int]Book
-
-func GetBook(ID int) (Book, error) {
-	b, ok := Books[ID]
+func GetBook(catalog map[int]Book, ID int) (Book, error) {
+	b, ok := catalog[ID]
 	if !ok {
 		return Book{}, fmt.Errorf("ID %d doesn't exist", ID)
 	}

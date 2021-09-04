@@ -8,11 +8,9 @@ type Book struct {
 	ID int
 }
 
-var Books map[int]Book
-
-func GetAllBooks() []Book {
+func GetAllBooks(catalog map[int]Book) []Book {
 	result := []Book{}
-	for _, b := range Books {
+	for _, b := range catalog {
 		result = append(result, b)
 	}
 	return result

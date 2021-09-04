@@ -8,10 +8,8 @@ type Book struct {
 	ID int
 }
 
-var Books []Book
-
-func GetBook(ID int) Book {
-	for _, b := range Books {
+func GetBook(catalog []Book, ID int) Book {
+	for _, b := range catalog {
 		if b.ID == ID {
 			return b
 		}

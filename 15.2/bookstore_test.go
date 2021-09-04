@@ -8,11 +8,12 @@ import (
 )
 
 func TestGetBook(t *testing.T) {
-	bookstore.Books = []bookstore.Book{
+	t.Parallel()
+	catalog := []bookstore.Book{
 		{ID: 1, Title: "For the Love of Go"},
 	}
 	want := bookstore.Book{ID: 1, Title: "For the Love of Go"}
-	got := bookstore.GetBook(1)
+	got := bookstore.GetBook(catalog, 1)
 	if !cmp.Equal(want, got) {
 		t.Error(cmp.Diff(want, got))
 	}
