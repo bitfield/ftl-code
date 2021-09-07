@@ -28,7 +28,7 @@ type Book struct {
 
 func (b *Book) SetCategory(category Category) error {
 	if !validCategory[category] {
-		return fmt.Errorf("unknown category %q", category)
+		return fmt.Errorf("unknown category %v", category)
 	}
 	b.category = category
 	return nil
