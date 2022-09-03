@@ -5,7 +5,7 @@ type Book struct {
 	Title  string
 	Author string
 	Copies int
-	ID int
+	ID     int
 }
 
 func GetBook(catalog []Book, ID int) Book {

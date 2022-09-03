@@ -5,7 +5,7 @@ type Book struct {
 	Title  string
 	Author string
 	Copies int
-	ID int
+	ID     int
 }
 
 type Catalog map[int]Book

@@ -101,7 +101,7 @@ func TestSqrt(t *testing.T) {
 	t.Parallel()
 	type testCase struct {
 		input float64
-		want float64
+		want  float64
 	}
 	testCases := []testCase{
 		{input: 4, want: 2},

@@ -11,19 +11,19 @@ const (
 )
 
 var validCategory = map[Category]bool{
-	CategoryAutobiography: true,
+	CategoryAutobiography:     true,
 	CategoryLargePrintRomance: true,
-	CategoryParticlePhysics: true,
+	CategoryParticlePhysics:   true,
 }
 
 type Book struct {
-	Title  string
-	Author string
-	Copies int
-	ID int
-	PriceCents int
+	Title           string
+	Author          string
+	Copies          int
+	ID              int
+	PriceCents      int
 	DiscountPercent int
-	category Category
+	category        Category
 }
 
 func (b *Book) SetCategory(category Category) error {

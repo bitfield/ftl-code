@@ -9,7 +9,7 @@ func TestAddMany(t *testing.T) {
 	t.Parallel()
 	type testCase struct {
 		inputs []float64
-		want float64
+		want   float64
 	}
 	testCases := []testCase{
 		{inputs: []float64{}, want: 0},
@@ -30,7 +30,7 @@ func TestSubtractMany(t *testing.T) {
 	t.Parallel()
 	type testCase struct {
 		inputs []float64
-		want float64
+		want   float64
 	}
 	testCases := []testCase{
 		{inputs: []float64{}, want: 0},
@@ -51,7 +51,7 @@ func TestMultiplyMany(t *testing.T) {
 	t.Parallel()
 	type testCase struct {
 		inputs []float64
-		want float64
+		want   float64
 	}
 	testCases := []testCase{
 		{inputs: []float64{}, want: 0},
@@ -72,7 +72,7 @@ func TestDivideMany(t *testing.T) {
 	t.Parallel()
 	type testCase struct {
 		inputs []float64
-		want float64
+		want   float64
 	}
 	testCases := []testCase{
 		{inputs: []float64{}, want: 0},

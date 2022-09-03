@@ -8,7 +8,7 @@ import (
 func TestSetPriceCents(t *testing.T) {
 	t.Parallel()
 	b := bookstore.Book{
-		Title: "For the Love of Go",
+		Title:      "For the Love of Go",
 		PriceCents: 4000,
 	}
 	want := 3000
@@ -25,7 +25,7 @@ func TestSetPriceCents(t *testing.T) {
 func TestSetPriceCentsInvalid(t *testing.T) {
 	t.Parallel()
 	b := bookstore.Book{
-		Title: "For the Love of Go",
+		Title:      "For the Love of Go",
 		PriceCents: 4000,
 	}
 	err := b.SetPriceCents(-1)
