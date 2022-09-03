@@ -15,6 +15,6 @@ func TestNetPriceCents(t *testing.T) {
 	want := 3000
 	got := bookstore.NetPriceCents(b)
 	if want != got {
-		t.Errorf("with price %d, after %d%% discount want net %d, got %d", b.PriceCents, b.DiscountPercent, want, got)
+		t.Errorf("want %d, got %d", want, got)
 	}
 }

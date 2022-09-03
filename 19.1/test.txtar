@@ -1,0 +1,2 @@
+! exec go test
+stderr 'cannot define new methods on non-local type int'

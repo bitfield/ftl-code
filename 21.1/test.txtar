@@ -1,0 +1,2 @@
+! exec go test
+stdout 'want 24, got 12'

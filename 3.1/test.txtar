@@ -1,0 +1,2 @@
+! exec go test
+stdout 'want 2.000000, got -2.000000'

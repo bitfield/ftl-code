@@ -1,6 +1,6 @@
 # For the Love of Go - code listings
 
-[![Cover image](img/cover.png)](https://bitfieldconsulting.com/books/love)
+[![Cover image](cover_small.png)](https://bitfieldconsulting.com/books/love)
 
 This is a collection of code samples, listings, and solutions to challenges from the book 'For the Love of Go', by John Arundel.
 
