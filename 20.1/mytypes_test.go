@@ -23,6 +23,16 @@ func TestStringsBuilder(t *testing.T) {
 	}
 }
 
+func TestMyBuilderLen(t *testing.T) {
+	t.Parallel()
+	var mb mytypes.MyBuilder
+	want := 15
+	got := mb.Len()
+	if want != got {
+		t.Errorf("want %d, got %d", want, got)
+	}
+}
+
 func TestMyBuilderHello(t *testing.T) {
 	t.Parallel()
 	var mb mytypes.MyBuilder
@@ -30,10 +40,5 @@ func TestMyBuilderHello(t *testing.T) {
 	got := mb.Hello()
 	if want != got {
 		t.Errorf("want %q, got %q", want, got)
-	}
-	wantLen := 15
-	gotLen := mb.Len()
-	if wantLen != gotLen {
-		t.Errorf("%q: want len %d, got %d", mb.String(), wantLen, gotLen)
 	}
 }

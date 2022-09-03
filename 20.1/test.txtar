@@ -1,3 +1,2 @@
 ! exec go test
 stderr 'mb.Len undefined'
-stderr 'mb.String undefined'
