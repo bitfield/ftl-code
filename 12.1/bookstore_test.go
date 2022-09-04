@@ -25,6 +25,6 @@ func TestBuy(t *testing.T) {
 	result := bookstore.Buy(b)
 	got := result.Copies
 	if want != got {
-		t.Errorf("want %d copies after buying 1 copy from a stock of 2, got %d", want, got)
+		t.Errorf("want %d, got %d", want, got)
 	}
 }

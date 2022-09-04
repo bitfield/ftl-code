@@ -28,7 +28,7 @@ func TestBuy(t *testing.T) {
 	}
 	got := result.Copies
 	if want != got {
-		t.Errorf("want %d copies after buying 1 copy from a stock of 2, got %d", want, got)
+		t.Errorf("want %d, got %d", want, got)
 	}
 }
 
@@ -41,6 +41,6 @@ func TestBuyErrorsIfNoCopiesLeft(t *testing.T) {
 	}
 	_, err := bookstore.Buy(b)
 	if err == nil {
-		t.Error("want error buying book when zero copies left, but got nil")
+		t.Error("want error buying from zero copies, got nil")
 	}
 }

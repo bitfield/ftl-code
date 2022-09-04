@@ -14,7 +14,7 @@ type Book struct {
 
 func (b *Book) SetPriceCents(price int) error {
 	if price < 0 {
-		return fmt.Errorf("bad price %d (must not be negative)", price)
+		return fmt.Errorf("negative price %d", price)
 	}
 	b.PriceCents = price
 	return nil

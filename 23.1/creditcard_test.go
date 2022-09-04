@@ -22,6 +22,6 @@ func TestNewInvalidReturnsError(t *testing.T) {
 	t.Parallel()
 	_, err := creditcard.New("")
 	if err == nil {
-		t.Fatal("want error for empty card number, but got nil")
+		t.Fatal("want error for invalid card number, got nil")
 	}
 }

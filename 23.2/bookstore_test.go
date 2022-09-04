@@ -34,6 +34,6 @@ func TestSetCategoryInvalid(t *testing.T) {
 	}
 	err := b.SetCategory(999)
 	if err == nil {
-		t.Fatal("want error setting invalid category 999, got nil")
+		t.Fatal("want error for invalid category, got nil")
 	}
 }
