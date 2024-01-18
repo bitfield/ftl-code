@@ -13,6 +13,6 @@ func New(number string) (card, error) {
 	return card{number}, nil
 }
 
-func (c *card) Number() string {
+func (c card) Number() string {
 	return c.number
 }
