@@ -1,9 +1,10 @@
 package calculator_test
 
 import (
-	"calculator"
 	"math"
 	"testing"
+
+	"calculator"
 )
 
 func TestAdd(t *testing.T) {
